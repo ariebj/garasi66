@@ -1,0 +1,14 @@
+[req]
+default_bits = 2048
+prompt = no
+default_md = sha256
+distinguished_name = dn
+
+[dn]
+C=ID
+ST=Jawa Barat
+L=Majalengka
+O=PT GARASI ENAM ENAM
+OU=IT DIVISION
+emailAddress=coffee.garasi66@gmail.com
+CN = garasi66.com
