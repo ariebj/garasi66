@@ -30,6 +30,8 @@
             fill: #ec4d37 !important;
         }
 
+
+
         .page__background {
             background: transparent !important;
         }
@@ -53,15 +55,19 @@
 <body>
     <ons-if platform="ios android">
         <ons-splitter>
-            <ons-splitter-side id="menu" side="left" class="w-50" collapse swipeable>
+            <ons-splitter-side id="menu" side="left" class="w-75" collapse swipeable>
                 <ons-page>
-                    <ons-toolbar>
-                        <div class="center">{{__('MENU')}}</div>
+                    <ons-toolbar class="bg-orange">
+                        <div class="center">
+                            <span class="text-white">{{__('MENU')}}</span>
+                        </div>
                     </ons-toolbar>
                     <ons-list>
-                        <ons-list-item tappable>
-                            Home
-                        </ons-list-item>
+                        <a href="{{route('welcome')}}">
+                            <ons-list-item ripple tappable>
+                                Home
+                            </ons-list-item>
+                        </a>
                         <ons-list-item tappable>
                             Settings
                         </ons-list-item>
@@ -88,7 +94,7 @@
                     </div>
                 </ons-toolbar>
                 <ons-page>
-                    <ons-carousel direction="left" fullscreen swipeable auto-scroll overscrollable id="carousel" style="background-image:url('/public/images/mainbg.png');background-size:cover;">
+                    <ons-carousel fullscreen swipeable auto-scroll overscrollable id="carousel" style="background-image:url('/public/images/mainbg-mobile.png');background-size:cover;">
                         <ons-carousel-item>
                             <ons-card class="p-0 bg-transparent border-0 text-white">
                                 <ons-row>
@@ -129,22 +135,22 @@
                             </ons-card>
                         </ons-carousel-item>
                     </ons-carousel>
+                    <ons-bottom-toolbar style="height:5rem;">
+                        <ons-row class="h-50 px-1 justify-content-between align-items-center bg-orange">
+                            <div class="title fw-bold fs-5 me-2">{{__('PESAN SEKARANG')}}</div>
+                            <ons-icon class="animate__animated animate__pulse  animate__infinite" size="18px" icon="md-caret-up-circle"></ons-icon>
+                        </ons-row>
+                        <ons-row class="h-50 justify-content-start align-items-center px-1 bg-orange">
+                            <ons-col class="w-50">
+                                <small class="card-text text-wrap">{{__('Jl. Babakan Koda No.66, Majalengka 45411')}}</small>
+                            </ons-col>
+                            <ons-col class="w-50 text-center">
+                                <ons-icon icon="md-whatsapp"></ons-icon>
+                                <small>0811219666</small>
+                            </ons-col>
+                        </ons-row>
+                    </ons-bottom-toolbar>
                 </ons-page>
-                <ons-bottom-toolbar style="height:5rem;background-color:transparent;">
-                    <ons-row class="h-50 px-1 justify-content-between align-items-center" style="background:#ec4d37;color:white;">
-                        <div class="title fw-bold fs-5 me-2">{{__('PESAN SEKARANG')}}</div>
-                        <ons-icon class="animate__animated animate__bounce animate__slower animate__infinite" size="18px" style="color:white" icon="md-caret-up-circle"></ons-icon>
-                    </ons-row>
-                    <ons-row class="h-50 justify-content-start align-items-center px-1" style="background:#ec4d37;color:white;">
-                        <ons-col class="w-50">
-                            <small class="card-text text-wrap">{{__('Jl. Babakan Koda No.66, Majalengka 45411')}}</small>
-                        </ons-col>
-                        <ons-col class="w-50 text-center">
-                            <ons-icon icon="md-whatsapp"></ons-icon>
-                            <small>0811219666</small>
-                        </ons-col>
-                    </ons-row>
-                </ons-bottom-toolbar>
             </ons-page>
         </ons-splitter>
     </ons-if>
@@ -228,22 +234,22 @@
                             </ons-card>
                         </ons-carousel-item>
                     </ons-carousel>
+                    <ons-bottom-toolbar style="height:5rem;">
+                        <ons-row class="h-50 px-1 justify-content-between align-items-center bg-orange">
+                            <div class="title fw-bold fs-5 me-2">{{__('PESAN SEKARANG')}}</div>
+                            <ons-icon class="animate__animated animate__pulse  animate__infinite" size="18px" icon="md-caret-up-circle"></ons-icon>
+                        </ons-row>
+                        <ons-row class="h-50 justify-content-start align-items-center px-1 bg-orange">
+                            <ons-col class="w-50">
+                                <small class="card-text text-wrap">{{__('Jl. Babakan Koda No.66, Majalengka 45411')}}</small>
+                            </ons-col>
+                            <ons-col class="w-50 text-center">
+                                <ons-icon icon="md-whatsapp"></ons-icon>
+                                <small>0811219666</small>
+                            </ons-col>
+                        </ons-row>
+                    </ons-bottom-toolbar>
                 </ons-page>
-                <ons-bottom-toolbar style="height:5rem;background-color:transparent;">
-                    <ons-row class="h-50 px-1 justify-content-between align-items-center" style="background:#ec4d37;color:white;">
-                        <div class="title fw-bold fs-5 me-2">{{__('PESAN SEKARANG')}}</div>
-                        <ons-icon class="animate__animated animate__pulse  animate__infinite" size="18px" style="color:white" icon="md-caret-up-circle"></ons-icon>
-                    </ons-row>
-                    <ons-row class="h-50 justify-content-start align-items-center px-1" style="background:#ec4d37;color:white;">
-                        <ons-col class="w-50">
-                            <small class="card-text text-wrap">{{__('Jl. Babakan Koda No.66, Majalengka 45411')}}</small>
-                        </ons-col>
-                        <ons-col class="w-50 text-center">
-                            <ons-icon icon="md-whatsapp"></ons-icon>
-                            <small>0811219666</small>
-                        </ons-col>
-                    </ons-row>
-                </ons-bottom-toolbar>
             </ons-page>
         </ons-splitter>
     </ons-if>
