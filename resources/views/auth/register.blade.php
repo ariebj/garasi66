@@ -56,9 +56,9 @@
             </p>
 
 
-            <ons-button type="submit">
+            <button type="submit" class="btn btn-orange">
                 {{ __('Register') }}
-            </ons-button>
+            </button>
         </form>
     </div>
 </ons-page>

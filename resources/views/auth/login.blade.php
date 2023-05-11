@@ -16,8 +16,15 @@
         <form method="POST" action="{{ route('login') }}">
             @csrf
             <p>
-                <ons-input id="email" type="email" modifier="material" float class="@error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="Email" required autocomplete="email" autofocus></ons-input>
+                <!-- <ons-input id="email" type="email" modifier="underbar" float class="@error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="Email" required autocomplete="email" autofocus></ons-input>
                 @error('email')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+                @enderror -->
+                <label for="phone">Nomor Telepon</label>
+                <ons-input id="phone" type="tel" modifier="underbar" class="@error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone" autofocus></ons-input>
+                @error('phone')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
                 </span>
@@ -25,7 +32,8 @@
             </p>
 
             <p>
-                <ons-input id="password" type="password" modifier="material" class="@error('password') is-invalid @enderror" name="password" placeholder="Password" required autocomplete="current-password"></ons-input>
+                <label for="password">Password</label>
+                <ons-input id="password" type="password" modifier="underbar" class="@error('password') is-invalid @enderror" name="password" required autocomplete="current-password"></ons-input>
                 @error('password')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
@@ -45,17 +53,18 @@
 
 
             <ons-col class="mt-3">
-                <ons-button type="submit">
+                <button type="submit" class="btn btn-orange" ripple>
                     {{ __('Login') }}
-                </ons-button>
+                </button>
 
                 @if (Route::has('password.request'))
-                <a class="btn btn-link" href="{{ route('password.request') }}">
-                    {{ __('Forgot Your Password?') }}
+                <a class="btn btn-link text-decoration-none text-orange" href="{{ route('password.request') }}">
+                    {{ __('Lupa sandi?') }}
                 </a>
                 @endif
             </ons-col>
         </form>
     </div>
 </ons-page>
+
 @endsection

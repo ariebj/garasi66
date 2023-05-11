@@ -108,7 +108,7 @@
                     </div>
                 </ons-toolbar>
                 <ons-page>
-                    <ons-carousel direction="horizontal" fullscreen swipeable auto-scroll overscrollable id="carousel" style="background-image:url('/public/images/mainbg.png');background-size:cover;">
+                    <ons-carousel direction="horizontal" fullscreen swipeable auto-scroll overscrollable id="carousel" style="background-image:url('/public/images/mainbg-mobile.png');background-size:cover;">
                         <ons-carousel-item>
                             <ons-card class="p-0 bg-transparent border-0 text-white">
                                 <ons-row>
