@@ -22,15 +22,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
-    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
-    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+    <link rel="stylesheet" href="node_modules/onsenui/css/onsenui-core.min.css">
+    <link rel="stylesheet" href="node_modules/onsenui/css/onsen-css-components.min.css">
+    <script src="node_modules/onsenui/js/onsenui.min.js"></script>
     <style>
         .back-button__icon {
             fill: #ec4d37 !important;
         }
-
-
 
         .page__background {
             background: transparent !important;
@@ -158,10 +156,16 @@
         <ons-splitter>
             <ons-splitter-side id="menu" side="left" class="w-25" collapse swipeable>
                 <ons-page>
-                    <ons-toolbar>
-                        <div class="center bg-orange">{{__('MENU')}}</div>
+                    <ons-toolbar class="bg-orange">
+                        <div class="left">
+                            <img src="{{asset('images/logo/logo-white.png')}}" style="height:36px;width:36px;" class="rounded-circle" />
+                        </div>
+                        <div class="center">
+                            <span class="text-white">{{__('Halo Sobat GG!')}}</span>
+                        </div>
                     </ons-toolbar>
                     <ons-list>
+
                         <a href="{{route('welcome')}}">
                             <ons-list-item ripple tappable>
                                 Home
@@ -174,6 +178,18 @@
                             About
                         </ons-list-item>
                     </ons-list>
+                    <ons-bottom-toolbar modifier="transparent">
+                        <a href="{{route('register')}}">
+                            <ons-button class="w-50 text-center bg-orange">
+                                {{__('Daftar')}}
+                            </ons-button>
+                        </a>
+                        <a href="{{route('login')}}">
+                            <ons-button class="w-50 text-center bg-orange">
+                                {{__('Masuk')}}
+                            </ons-button>
+                        </a>
+                    </ons-bottom-toolbar>
                 </ons-page>
             </ons-splitter-side>
             <ons-page id="app">
@@ -193,7 +209,7 @@
                     </div>
                 </ons-toolbar>
                 <ons-page>
-                    <ons-carousel fullscreen swipeable auto-scroll overscrollable id="carousel" style="background-image:url('/public/images/mainbg.png');background-size:cover;">
+                    <ons-carousel direction="horizontal" fullscreen swipeable auto-scroll overscrollable id="carousel" style="background-image:url('/public/images/mainbg.png');background-size:cover;">
                         <ons-carousel-item>
                             <ons-card class="p-0 bg-transparent border-0 text-white">
                                 <ons-row>
