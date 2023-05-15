@@ -63,7 +63,7 @@
 </head>
 
 <body>
-    <ons-if platform="ios android">
+    <ons-if platform="android ios">
         <ons-splitter>
             <ons-splitter-side id="menu" side="left" class="w-75" collapse swipeable>
                 <ons-page>
@@ -114,8 +114,8 @@
                         {{config('app.name')}}
                     </div>
                     <div class="right">
-                        <ons-toolbar-button onclick="createAccountDialog()">
-                            <ons-icon size="32px" style="color:#ec4d37" icon="md-account-circle"></ons-icon>
+                        <ons-toolbar-button>
+                            <ons-icon size="32px" style="color:#ec4d37" icon="md-search"></ons-icon>
                         </ons-toolbar-button>
                     </div>
                 </ons-toolbar>
@@ -145,8 +145,11 @@
                     </ons-carousel>
                     <ons-bottom-toolbar style="height:5rem;">
                         <ons-row class="h-50 px-1 justify-content-between align-items-center bg-orange">
-                            <div class="title fw-bold fs-5 me-2">{{__('PESAN SEKARANG')}}</div>
-                            <ons-icon class="animate__animated animate__pulse  animate__infinite" size="18px" icon="md-caret-up-circle"></ons-icon>
+                            <ons-toolbar-button class="text-white text-center w-100" onclick="createAccountDialog()">
+                                <span class="fw-bold fs-5 me-2">{{__('PESAN SEKARANG')}}</span>
+                                <ons-icon class="animate__animated animate__pulse  animate__infinite" size="18px" icon="md-caret-up-circle"></ons-icon>
+                            </ons-toolbar-button>
+
                         </ons-row>
                         <ons-row class="h-50 justify-content-start align-items-center px-1 bg-orange">
                             <ons-col class="w-50">
@@ -213,8 +216,8 @@
                         {{config('app.name')}}
                     </div>
                     <div class="right">
-                        <ons-toolbar-button onclick="createAccountDialog()">
-                            <ons-icon size="32px" style="color:#ec4d37" icon="md-account-circle"></ons-icon>
+                        <ons-toolbar-button>
+                            <ons-icon size="32px" style="color:#ec4d37" icon="md-search"></ons-icon>
                         </ons-toolbar-button>
                     </div>
                 </ons-toolbar>
@@ -244,8 +247,11 @@
                     </ons-carousel>
                     <ons-bottom-toolbar style="height:5rem;">
                         <ons-row class="h-50 px-1 justify-content-between align-items-center bg-orange">
-                            <div class="title fw-bold fs-5 me-2">{{__('PESAN SEKARANG')}}</div>
-                            <ons-icon class="animate__animated animate__pulse  animate__infinite" size="18px" icon="md-caret-up-circle"></ons-icon>
+                            <ons-toolbar-button class="text-white text-center w-100" onclick="createAccountDialog()">
+                                <span class="fw-bold fs-5 me-2">{{__('PESAN SEKARANG')}}</span>
+                                <ons-icon class="animate__animated animate__pulse  animate__infinite" size="18px" icon="md-caret-up-circle"></ons-icon>
+                            </ons-toolbar-button>
+
                         </ons-row>
                         <ons-row class="h-50 justify-content-start align-items-center px-1 bg-orange">
                             <ons-col class="w-50">
@@ -263,9 +269,9 @@
     </ons-if>
     <template id="account-action">
         <ons-alert-dialog id="my-account-dialog" modifier="rowfooter">
-            <div class="alert-dialog-title">Akun</div>
+            <div class="alert-dialog-title text-center">Silahkan Login</div>
             <div class="alert-dialog-content">
-                {{__('Silahkan Login atau Register jika belum memiliki akun.')}}
+                {{__('Anda harus Login untuk melakukan pemesanan atau Register jika belum memiliki akun.')}}
             </div>
             <div class="alert-dialog-footer">
                 <ons-alert-dialog-button class="text-danger" onclick="hideAlertDialog()">
