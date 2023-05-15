@@ -26,6 +26,18 @@
     <link rel="stylesheet" href="node_modules/onsenui/css/onsen-css-components.min.css">
     <script src="node_modules/onsenui/js/onsenui.min.js"></script>
     <style>
+        .bg-white-gradient {
+            color: #ec4d37;
+            background: rgb(255, 255, 255);
+            background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.5) 25%, rgba(255, 255, 255, 0) 50%);
+        }
+
+        .bg-orange-gradient {
+            color: white;
+            background: rgb(236, 77, 55);
+            background: linear-gradient(0deg, rgba(236, 77, 55, 1) 0%, rgba(236, 77, 55, 0.5) 20%, rgba(236, 77, 55, 0) 40%);
+        }
+
         .back-button__icon {
             fill: #ec4d37 !important;
         }
@@ -108,45 +120,27 @@
                     </div>
                 </ons-toolbar>
                 <ons-page>
-                    <ons-carousel direction="horizontal" fullscreen swipeable auto-scroll overscrollable id="carousel" style="background-image:url('/public/images/mainbg-mobile.png');background-size:cover;">
-                        <ons-carousel-item>
-                            <ons-card class="p-0 bg-transparent border-0 text-white">
-                                <ons-row>
-                                    <ons-col class="col-sm-4 p-0">
-                                        <img src="https://monaca.io/img/logos/download_image_onsenui_01.png" alt="Onsen UI" class="img-fluid rounded-start">
-                                    </ons-col>
-                                    <ons-col class="col-sm-8 px-1">
-                                        <div class="card-title">PROMO 1</div>
-                                        <p class="card-text">{{__('Deskripsi promo 1')}}</p>
-                                    </ons-col>
-                                </ons-row>
-                            </ons-card>
+                    <ons-carousel direction="horizontal" fullscreen swipeable auto-scroll overscrollable id="carousel" class="bg-white">
+                        <ons-carousel-item style="background-image:url('/public/images/mainbg-2.png');background-size:cover;background-position:center;">
+                            <ons-row class="bg-orange-gradient h-100">
+                                <ons-col vertical-align="bottom" class="mb-5">
+                                    <p class="px-1 fw-bold">{{__('Segala sesuatu disekitaran kamu mungkin bisa menjadi sumber potensi menciptakan rasa bahagia, seperti keluarga, teman, ataupun sebuah barang kecil yang punya banyak kenangan.')}}</p>
+                                </ons-col>
+                            </ons-row>
                         </ons-carousel-item>
-                        <ons-carousel-item>
-                            <ons-card class="p-0 bg-transparent border-0 text-white">
-                                <ons-row>
-                                    <ons-col class="col-sm-4 p-0">
-                                        <img src="https://monaca.io/img/logos/download_image_onsenui_01.png" alt="Onsen UI" class="img-fluid rounded-start">
-                                    </ons-col>
-                                    <ons-col class="col-sm-8 px-1">
-                                        <div class="card-title">PROMO 2</div>
-                                        <p class="card-text">{{__('Deskripsi promo 2')}}</p>
-                                    </ons-col>
-                                </ons-row>
-                            </ons-card>
+                        <ons-carousel-item style="background-image:url('/public/images/mainbg-3.png');background-size:cover;background-position:center;">
+                            <ons-row class="bg-orange-gradient h-100">
+                                <ons-col vertical-align="bottom" class="mb-5">
+                                    <p class="px-1 fw-bold">{{__('Selain suplai kafein kita juga membutuhkan karbohidrat loh!')}}</p>
+                                </ons-col>
+                            </ons-row>
                         </ons-carousel-item>
-                        <ons-carousel-item>
-                            <ons-card class="p-0 bg-transparent border-0 text-white">
-                                <ons-row>
-                                    <ons-col class="col-sm-4 p-0">
-                                        <img src="https://monaca.io/img/logos/download_image_onsenui_01.png" alt="Onsen UI" class="img-fluid rounded-start">
-                                    </ons-col>
-                                    <ons-col class="col-sm-8 px-1">
-                                        <div class="card-title">PROMO 3</div>
-                                        <p class="card-text">{{__('Deskripsi promo 3')}}</p>
-                                    </ons-col>
-                                </ons-row>
-                            </ons-card>
+                        <ons-carousel-item style="background-image:url('/public/images/mainbg-mobile.png');background-size:cover;background-position:center;">
+                            <ons-row class="bg-orange-gradient h-100">
+                                <ons-col vertical-align="bottom" class="mb-5">
+                                    <p class="px-1 fw-bold">{{__('Ga semua Cape Obatnya istirahat, Ngobrol sama temen sambil minum yang manis-manis juga jadi obat lain buat rasa cape kamu loh.')}}</p>
+                                </ons-col>
+                            </ons-row>
                         </ons-carousel-item>
                     </ons-carousel>
                     <ons-bottom-toolbar style="height:5rem;">
@@ -225,45 +219,27 @@
                     </div>
                 </ons-toolbar>
                 <ons-page>
-                    <ons-carousel direction="horizontal" fullscreen swipeable auto-scroll overscrollable id="carousel" style="background-image:url('/public/images/mainbg.png');background-size:cover;">
-                        <ons-carousel-item>
-                            <ons-card class="p-0 bg-transparent border-0 text-white">
-                                <ons-row>
-                                    <ons-col class="col-sm-4 p-0">
-                                        <img src="https://monaca.io/img/logos/download_image_onsenui_01.png" alt="Onsen UI" class="img-fluid rounded-start">
-                                    </ons-col>
-                                    <ons-col class="col-sm-8 px-1">
-                                        <div class="card-title">PROMO 1</div>
-                                        <p class="card-text">{{__('Deskripsi promo 1')}}</p>
-                                    </ons-col>
-                                </ons-row>
-                            </ons-card>
+                    <ons-carousel direction="horizontal" fullscreen swipeable auto-scroll overscrollable id="carousel" class="bg-white">
+                        <ons-carousel-item style="background-image:url('/public/images/mainbg-2.png');background-size:cover;background-position:center;">
+                            <ons-row class="bg-orange-gradient h-100">
+                                <ons-col vertical-align="bottom" class="mb-5">
+                                    <p class="px-1 fw-bold">{{__('Segala sesuatu disekitaran kamu mungkin bisa menjadi sumber potensi menciptakan rasa bahagia, seperti keluarga, teman, ataupun sebuah barang kecil yang punya banyak kenangan.')}}</p>
+                                </ons-col>
+                            </ons-row>
                         </ons-carousel-item>
-                        <ons-carousel-item>
-                            <ons-card class="p-0 bg-transparent border-0 text-white">
-                                <ons-row>
-                                    <ons-col class="col-sm-4 p-0">
-                                        <img src="https://monaca.io/img/logos/download_image_onsenui_01.png" alt="Onsen UI" class="img-fluid rounded-start">
-                                    </ons-col>
-                                    <ons-col class="col-sm-8 px-1">
-                                        <div class="card-title">PROMO 2</div>
-                                        <p class="card-text">{{__('Deskripsi promo 2')}}</p>
-                                    </ons-col>
-                                </ons-row>
-                            </ons-card>
+                        <ons-carousel-item style="background-image:url('/public/images/mainbg-3.png');background-size:cover;background-position:center;">
+                            <ons-row class="bg-orange-gradient h-100">
+                                <ons-col vertical-align="bottom" class="mb-5">
+                                    <p class="px-1 fw-bold">{{__('Selain suplai kafein kita juga membutuhkan karbohidrat loh!')}}</p>
+                                </ons-col>
+                            </ons-row>
                         </ons-carousel-item>
-                        <ons-carousel-item>
-                            <ons-card class="p-0 bg-transparent border-0 text-white">
-                                <ons-row>
-                                    <ons-col class="col-sm-4 p-0">
-                                        <img src="https://monaca.io/img/logos/download_image_onsenui_01.png" alt="Onsen UI" class="img-fluid rounded-start">
-                                    </ons-col>
-                                    <ons-col class="col-sm-8 px-1">
-                                        <div class="card-title">PROMO 3</div>
-                                        <p class="card-text">{{__('Deskripsi promo 3')}}</p>
-                                    </ons-col>
-                                </ons-row>
-                            </ons-card>
+                        <ons-carousel-item style="background-image:url('/public/images/mainbg-mobile.png');background-size:cover;background-position:center;">
+                            <ons-row class="bg-orange-gradient h-100">
+                                <ons-col vertical-align="bottom" class="mb-5">
+                                    <p class="px-1 fw-bold">{{__('Ga semua Cape Obatnya istirahat, Ngobrol sama temen sambil minum yang manis-manis juga jadi obat lain buat rasa cape kamu loh.')}}</p>
+                                </ons-col>
+                            </ons-row>
                         </ons-carousel-item>
                     </ons-carousel>
                     <ons-bottom-toolbar style="height:5rem;">
