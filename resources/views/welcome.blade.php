@@ -4,7 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link rel="manifest" href="/manifest.json">
+    <!-- Chrome for Android theme color -->
+    <meta name="theme-color" content="#ec4d37">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -292,6 +294,13 @@
     </template>
     @livewireScripts
     @stack('scripts')
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js')
+                .then(() => console.log("Service Worker Registered"))
+                .catch(e => console.log(e));
+        }
+    </script>
     <script>
         var createAccountDialog = function() {
             var dialog = document.getElementById('my-account-dialog');
