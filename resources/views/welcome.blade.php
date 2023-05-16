@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="manifest" href="/manifest.json">
+    <!-- <link rel="manifest" href="/manifest.json"> -->
     <!-- Chrome for Android theme color -->
-    <meta name="theme-color" content="#ec4d37">
+    <!-- <meta name="theme-color" content="#ec4d37"> -->
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -145,19 +145,24 @@
                             </ons-row>
                         </ons-carousel-item>
                     </ons-carousel>
-                    <ons-bottom-toolbar style="height:5rem;">
+                    <ons-bottom-toolbar style="height:6rem;">
                         <ons-row class="h-50 px-1 justify-content-between align-items-center bg-orange">
-                            <ons-toolbar-button class="text-white text-center w-100" onclick="createAccountDialog()">
+                            <ons-toolbar-button class="text-white text-center w-100" ripple onclick="createAccountDialog()">
                                 <span class="fw-bold fs-5 me-2">{{__('PESAN SEKARANG')}}</span>
                                 <ons-icon class="animate__animated animate__pulse  animate__infinite" size="18px" icon="md-caret-up-circle"></ons-icon>
                             </ons-toolbar-button>
-
                         </ons-row>
-                        <ons-row class="h-50 justify-content-start align-items-center px-1 bg-orange">
+                        <ons-row class="h-50 justify-content-start align-items-center px-1 bg-orange" style="font-size:8px;">
                             <ons-col class="w-50">
-                                <small class="card-text text-wrap">{{__('Jl. Babakan Koda No.66, Majalengka 45411')}}</small>
+                                <small class="card-text text-wrap">
+                                    {{__('Dirjen Perlindungan Konsumen dan Tata Tertib Niaga, Kementrian Perdagagan Republik Indonesia')}}<br>
+                                    {{__('Whatsapp Dirjen PKTN : 0853-111-1010')}}
+                                </small>
                             </ons-col>
                             <ons-col class="w-50 text-center">
+                                <small class="card-text text-wrap">
+                                    {{__('Whatsapp CS Garasi 66')}}
+                                </small><br>
                                 <ons-icon icon="md-whatsapp"></ons-icon>
                                 <small>0811219666</small>
                             </ons-col>
@@ -247,19 +252,24 @@
                             </ons-row>
                         </ons-carousel-item>
                     </ons-carousel>
-                    <ons-bottom-toolbar style="height:5rem;">
+                    <ons-bottom-toolbar style="height:6rem;">
                         <ons-row class="h-50 px-1 justify-content-between align-items-center bg-orange">
                             <ons-toolbar-button class="text-white text-center w-100" onclick="createAccountDialog()">
                                 <span class="fw-bold fs-5 me-2">{{__('PESAN SEKARANG')}}</span>
                                 <ons-icon class="animate__animated animate__pulse  animate__infinite" size="18px" icon="md-caret-up-circle"></ons-icon>
                             </ons-toolbar-button>
-
                         </ons-row>
                         <ons-row class="h-50 justify-content-start align-items-center px-1 bg-orange">
-                            <ons-col class="w-50">
-                                <small class="card-text text-wrap">{{__('Jl. Babakan Koda No.66, Majalengka 45411')}}</small>
+                            <ons-col class="w-75">
+                                <small class="card-text text-wrap">
+                                    {{__('Dirjen Perlindungan Konsumen dan Tata Tertib Niaga, Kementrian Perdagagan Republik Indonesia')}}<br>
+                                    {{__('Whatsapp Dirjen PKTN : 0853-111-1010')}}
+                                </small>
                             </ons-col>
-                            <ons-col class="w-50 text-center">
+                            <ons-col class="w-25 text-center">
+                                <small class="card-text text-wrap">
+                                    {{__('Whatsapp CS Garasi 66')}}
+                                </small><br>
                                 <ons-icon icon="md-whatsapp"></ons-icon>
                                 <small>0811219666</small>
                             </ons-col>
@@ -294,13 +304,13 @@
     </template>
     @livewireScripts
     @stack('scripts')
-    <script>
+    <!-- <script>
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('/sw.js')
                 .then(() => console.log("Service Worker Registered"))
                 .catch(e => console.log(e));
         }
-    </script>
+    </script> -->
     <script>
         var createAccountDialog = function() {
             var dialog = document.getElementById('my-account-dialog');

@@ -7,7 +7,7 @@ self.addEventListener("install", function (e) {
     // waitUntil tells the browser that the install event is not finished until we have
     // cached all of our files
     e.waitUntil(
-        // Here we call our cache "myonsenuipwa", but you can name it anything unique
+        // Here we call our cache "garasi66", but you can name it anything unique
         caches.open("garasi66").then((cache) => {
             // If the request for any of these resources fails, _none_ of the resources will be
             // added to the cache.
