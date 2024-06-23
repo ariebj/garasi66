@@ -10,7 +10,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Lumaju') }}</title>
 
     <!-- Scripts -->
     <script src="https://kit.fontawesome.com/cdda5b48e5.js" crossorigin="anonymous"></script>

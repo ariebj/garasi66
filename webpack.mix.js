@@ -1,4 +1,4 @@
-const mix = require('laravel-mix');
+const mix = require("laravel-mix");
 
 /*
  |--------------------------------------------------------------------------
@@ -10,7 +10,17 @@ const mix = require('laravel-mix');
  | file for the application as well as bundling up all the JS files.
  |
  */
-
-mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css')
+mix.browserSync({
+    injectChanges: true,
+    open: "external",
+    host: "garasi66.com",
+    proxy: "https://garasi66.com",
+    https: {
+        key: "./ssl/server.key",
+        cert: "./ssl/server.crt",
+    },
+    ui: false,
+});
+mix.js("resources/js/app.js", "public/js")
+    .sass("resources/sass/app.scss", "public/css")
     .sourceMaps();
